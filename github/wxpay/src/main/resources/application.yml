@@ -1,0 +1,19 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/itclass?useUnicode=yes&characterEncoding=utf8
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+  offset-as-page-num: true
+  row-bounds-with-count: true
