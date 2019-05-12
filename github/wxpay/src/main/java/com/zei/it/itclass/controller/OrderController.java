@@ -30,8 +30,7 @@ public class OrderController {
     public void saveOrder(@RequestParam(value = "articleId",required = true) int articleId,
                                   int userId, HttpServletRequest request, HttpServletResponse response) throws Exception{
 
-//        String ip = IpUtils.getIpAddr(request);
-        String ip = "175.43.76.147";
+        String ip = IpUtils.getIpAddr(request);
 
         Order order = new Order();
         order.setArticleId(articleId);

@@ -13,6 +13,8 @@ import com.zei.it.itclass.util.HttpUtils;
 import com.zei.it.itclass.util.WxPayUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
 import java.util.Date;
@@ -36,6 +38,7 @@ public class OrderServiceImpl implements OrderService{
     WeChatConfig weChatConfig;
 
     @Override
+    @Transactional(propagation = Propagation.REQUIRED)
     public String save(Order order) {
         //验证文章是否存在
         Article article = articleMapper.getOne(order.getArticleId());
