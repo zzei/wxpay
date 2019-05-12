@@ -51,8 +51,7 @@ public class WeChatConfig {
     private final static String USER_MSG_URL = "https://api.weixin.qq.com/sns/userinfo?access_token=%s&openid=%slang=zh_CN";
 
     //下单链接
-//    private final static String UNIFILED_ORDER_URL = "https://api.mch.weixin.qq.com/pay/unifiedorder";
-    private final static String UNIFILED_ORDER_URL = "http://api.xdclass.net/pay/unifiedorder";
+    private final static String UNIFILED_ORDER_URL = "https://api.mch.weixin.qq.com/pay/unifiedorder";
 
     //获取支付配置信息
     @Value("${wxpay.mch_id}")
